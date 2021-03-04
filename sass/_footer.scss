@@ -1,0 +1,137 @@
+.footer {
+  background-color: $veryDarkCyan;
+  color: $veryPaleCyan;
+  margin-top: -50px;
+
+  &__container {
+    padding: 20px;
+  }
+
+  .logo {
+    padding: 100px 20px 0;
+  }
+
+  &__address {
+    // padding: 100px 20px 0 20px;
+    display: grid;
+    gap: 20px;
+
+    .location img {
+      max-width: 100%;
+      padding-top: 5px;
+    }
+    span {
+      margin-right: 20px;
+    }
+
+    .location,
+    .phone,
+    .email {
+      display: flex;
+    }
+  }
+
+  &__nav {
+    padding: 50px 0;
+
+    ul {
+      list-style: none;
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $veryPaleCyan;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__social {
+    text-align: center;
+
+    i {
+      border: 1px solid white;
+      padding: 5px;
+      border-radius: 20px;
+      cursor: pointer;
+
+      &:first-child {
+        padding: 5px 8px;
+      }
+
+      &:last-child {
+        padding: 5px 6px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      &:active {
+        color: $pink;
+        border: 1px solid $pink;
+      }
+    }
+  }
+
+  &__rights {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: lightblue;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 991px) {
+  .footer {
+    .logo {
+      padding: 100px 80px 0;
+    }
+
+    &__container {
+      display: flex;
+      padding: 20px 80px;
+      height: 200px;
+
+      .footer__address {
+        flex: 1;
+        margin-right: 50px;
+      }
+
+      .footer__nav {
+        flex: 1;
+        max-width: 500px;
+        padding: 0;
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+        }
+      }
+
+      .footer_social {
+        flex: 1;
+      }
+    }
+
+    &__rights {
+      text-align: right;
+      padding: 0 80px;
+    }
+  }
+}
